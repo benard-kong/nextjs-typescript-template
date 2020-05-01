@@ -1,0 +1,18 @@
+#!/bin/bash
+
+npm run test:noWatch
+
+tests_exit_code=$?
+
+if [[ tests_exit_code -eq 1 ]]; then
+  cancel_formatting="\e[0m\e[39m"
+  stars="\e[41m\e[97m**********************************************${cancel_formatting}"
+  message="\e[0m\e[40m\e[91mWARNING: NOT ALL TESTS ARE PASSING. Run 'npm run test' and confirm all tests are passing.${cancel_formatting}"
+  echo -e "\n\n${stars}\n${message}\n${stars}\n"
+  exit 1
+elif [[ tests_exit_code -eq 0 ]]; then
+  exit 0
+else
+  echo -e "\e[0m\e[39mReceived exit code: ${tests_exit_code} from tests. Should only receive 0 or 1 (pass/fail)."
+  exit 1
+fi

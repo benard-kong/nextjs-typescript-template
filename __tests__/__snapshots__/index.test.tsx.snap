@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<h1
+  className="pages__Title-lrbmwi-0 fFBxIA"
+>
+  My page
+</h1>
+`;
