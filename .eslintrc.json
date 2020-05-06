@@ -38,7 +38,9 @@
     ],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "error"
+    "react-hooks/exhaustive-deps": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"]
   },
   "settings": {
     "import/resolver": {
